@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 #
 Esse porojeto foi criado do zero por mim [JD MARVIN MAEL DESTIN](http://github.com/jdmarvin7)
 #
+# !IMPORTANTE
+precisa cadastrar um usuário para poder fazer login no sistema
 #
 - O projeto foi prototipado com adobeXd
 #
@@ -21,6 +23,7 @@ link do projeto backend [link](https://github.com/jdmarvin7/api-feedbacks)
 - Tela de envio dos feedbacks,
 - Tela de Inboxes
 - A sera direcionado para home para ver seus feedbacks que vão aparecer no feed
+- validações no front-end com angular
 
 ## Development server
 
