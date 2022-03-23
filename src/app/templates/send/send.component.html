@@ -3,27 +3,32 @@
     <div class="details">
       <img src="https://www.lance.com.br/files/article_main/uploads/2021/02/28/603bdef934423.jpeg" width="60" alt="">
       <div>
-        <h2>Username</h2>
-        <small>to: <input class="to" type="text"></small>
+        <h2>{{ user.data.nome }}</h2>
+        <small>to: <input class="to" type="text" [(ngModel)]="username" name="sendUsername"
+          name="to"></small>
       </div>
     </div>
     <form class="form-input">
       <div>
         <label for="" class="sr-only"></label>
-        <input type="text" placeholder="Pontos a melhorar">
+        <input type="text" placeholder="Pontos a melhorar" name="pontoMelhorar"
+        [(ngModel)]="pontoMelhorar">
       </div>
       <div>
         <label for="" class="sr-only"></label>
-        <input type="text" placeholder="Pontos a manter">
+        <input type="text" placeholder="Pontos a manter" name="pontoManter"
+        [(ngModel)]="pontoManter">
       </div>
       <div>
         <label for="" class="sr-only"></label>
-        <input type="text" placeholder="Sugestões">
+        <input type="text" placeholder="Sugestões" name="sugestoes" id="sugestoes"
+        [(ngModel)]="sugestoes">
       </div>
       <div class="last">
         <label for="" class="sr-only"></label>
-        <input type="text" placeholder="Feedback final">
-        <button class="botao" type="submit" value=""[routerLink]="['view']">Send</button>
+        <input type="text" placeholder="Feedback final" name="feedback"
+        [(ngModel)]="feedbackFinal">
+        <button class="botao" type="submit" (click)="sendMessages()" value="">Send</button>
       </div>
     </form>
   </div>

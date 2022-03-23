@@ -26,7 +26,7 @@ export class ApiServiceService {
       username: username,
       email: email,
       password: password
-    });
+    })
   }
 
   autenticar(username: string, password: string): Observable<HttpResponse<any>> {
@@ -83,7 +83,6 @@ export class ApiServiceService {
 
   logout() {
     this.excluirToken();
-    this.usuarioSubject.next({})
   }
 
   estaLogado() {

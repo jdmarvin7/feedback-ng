@@ -14,15 +14,14 @@ export class ServiceSendService {
     return this.http.get(this.urlBase);
   }
 
-  sendMessage(username: string, sendUsername: string, pontoManter: string,
-     pontoMelhorar: string, sugestoes: string, feedbackFinal: string): Observable<any> {
+  sendMessage(username: string, pontoMelhorar: string,
+    pontoManter: string, sugestoes: string, feedback: string): Observable<any> {
     return this.http.post(`${this.urlBase}/enviar`, {
       username: username,
-      sendUsername: sendUsername,
       pontoMelhorar: pontoMelhorar,
       pontoManter: pontoManter,
       sugestoes: sugestoes,
-      feedbackFinal: feedbackFinal
+      feedbackFinal: feedback
     });
   }
 

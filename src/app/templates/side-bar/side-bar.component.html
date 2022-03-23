@@ -2,7 +2,7 @@
 
   <div class="user-bg">
     <img src="/assets/img/user-logo.svg" alt="" width="90">
-    <p class="username">Username</p>
+    <p class="username">{{ user.data.nome }}</p>
     <small class="edit-prolfile">
       <img src="" alt="">
       editar prolfil
@@ -23,7 +23,7 @@
       <h3>SEND</h3>
     </div>
 
-    <div class="logout" [routerLink]="['/']">
+    <div class="logout" [routerLink]="['/']" (click)="logOut()">
       <a>
         logout
         <img src="/assets/img/logout.svg" width="20"alt="">

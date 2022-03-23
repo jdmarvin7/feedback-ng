@@ -13,11 +13,14 @@ mas grande parte do estilo foi criado com SCSS.
 #
 - O backend foi criado em nodejs com express diferente do font o back está 100% pronto e fazendo esse projeto pude praticar muitas coisas que aprendi no decorrer da minha aprendizagem,
 - É um app simples com usúario[USERS], envios[SENDS] e mensagens recebidos[INBOXES]
+
+link do projeto backend [link](https://github.com/jdmarvin7/api-feedbacks)
 #
 #
-# Dificuldades
-- As dificuldades que estou tendo no momento no app é mais na parte do front com Angular,
-- poder pegar o token do usuário assim que ele for autenticado e a partir desse token poder navegar no sistema
+# Partes faltantes para finalizar o projeto front-end
+- Tela de envio dos feedbacks,
+- Tela de Inboxes
+- A sera direcionado para home para ver seus feedbacks que vão aparecer no feed
 
 ## Development server
 

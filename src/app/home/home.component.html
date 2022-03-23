@@ -4,9 +4,10 @@
     <p>Login to continue</p>
   </header>
 
-  <form>
+  <form #loginForm="ngForm">
     <div class="div">
-      <input type="text" placeholder="Username" id="username" [(ngModel)]="username" name="username">
+      <input type="text" placeholder="Username" id="username"
+      [(ngModel)]="username" name="username" #campoUsuario="ngModel" required>
       <div class="icon-input">
         <img src="assets/img/user-icon-input.svg" alt="">
       </div>
@@ -18,7 +19,7 @@
       </div>
     </div>
     <div class="buttons">
-      <button class="login" type="submit" (click)="loginUser()">Login</button>
+      <button class="login" type="submit" (click)="login()">Login</button>
       <button class="signup" [routerLink]="['signup']">Sign up</button>
     </div>
   </form>

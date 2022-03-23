@@ -9,9 +9,26 @@ import { ApiServiceService } from 'src/app/services/api-service.service';
 })
 export class SideBarComponent implements OnInit {
 
+  user: any;
+
   constructor(private service: ApiServiceService, private router: Router) { }
 
   ngOnInit(): void {
+    this.userLogged();
   }
 
+  userLog() {
+  }
+
+  logOut() {
+    this.service.logout();
+  }
+
+  userLogged() {
+    this.service.estaLogado();
+    const token = JSON.parse(this.service.retornaToken());
+    this.user = token;
+    console.log(token);
+
+  }
 }

@@ -1,11 +1,11 @@
-<ng-container *ngFor="let user of users">
+<ng-container >
   <div class="feedback-card" [routerLink]="['view']">
     <img src="https://www.lance.com.br/files/article_main/uploads/2021/02/28/603bdef934423.jpeg" width="60" alt="Imagem de perfil da pessoa">
     <div>
-      <h2>{{ user._id }}</h2>
+      <h2>{{ user.data.nome }}</h2>
       <div>
-        <p>Title: <span> {{ user.feedbackFinal }} </span></p>
-        <small>{{ user.created_at }}</small>
+        <p>Title: <span> {{ user.data.email }} </span></p>
+        <small>{{ user.data.id }}</small>
       </div>
     </div>
   </div>
