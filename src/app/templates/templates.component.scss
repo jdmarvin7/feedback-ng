@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.another-nav {
+  background-color: var(--red);
+  padding:1.2rem 2rem;
+  color: var(--white);
+  .img {
+    margin-right: 1rem;
+  }
+  .home {
+    height:80px
+  }
+}
+

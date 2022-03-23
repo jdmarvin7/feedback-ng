@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="156" height="155" viewBox="0 0 156 155">
+  <defs>
+    <filter id="Elipse_6" x="0" y="0" width="156" height="155" filterUnits="userSpaceOnUse">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#f71414" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Elipse_6)">
+    <ellipse id="Elipse_6-2" data-name="Elipse 6" cx="69" cy="68.5" rx="69" ry="68.5" transform="translate(9 3)" fill="#fff"/>
+  </g>
+  <path id="Icon_awesome-user-alt" data-name="Icon awesome-user-alt" d="M37,41.625A20.813,20.813,0,1,0,16.188,20.813,20.818,20.818,0,0,0,37,41.625ZM55.5,46.25H47.536a25.159,25.159,0,0,1-21.073,0H18.5A18.5,18.5,0,0,0,0,64.75v2.313A6.939,6.939,0,0,0,6.938,74H67.063A6.939,6.939,0,0,0,74,67.063V64.75A18.5,18.5,0,0,0,55.5,46.25Z" transform="translate(41 35)" fill="none" stroke="#000" stroke-width="3"/>
+</svg>

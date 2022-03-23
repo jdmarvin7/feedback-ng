@@ -1,0 +1,25 @@
+<section id="login">
+  <header>
+    <h1>Welcome Back!</h1>
+    <p>Login to continue</p>
+  </header>
+
+  <form>
+    <div class="div">
+      <input type="text" placeholder="Username" id="username" [(ngModel)]="username" name="username">
+      <div class="icon-input">
+        <img src="assets/img/user-icon-input.svg" alt="">
+      </div>
+    </div>
+    <div class="div">
+      <input type="password" placeholder="Password" id="password" [(ngModel)]="password" name="password">
+      <div class="icon-input">
+        <img src="assets/img/password-icon-input.svg" alt="">
+      </div>
+    </div>
+    <div class="buttons">
+      <button class="login" type="submit" (click)="loginUser()">Login</button>
+      <button class="signup" [routerLink]="['signup']">Sign up</button>
+    </div>
+  </form>
+</section>
