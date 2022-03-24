@@ -1,7 +1,6 @@
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
-import { User } from "./User";
 import jwt_decode from "jwt-decode";
 
 const KEY = 'token'
@@ -14,6 +13,8 @@ export class ApiServiceService {
   urlBase = 'http://localhost:3000/users';
   private usuarioSubject: any;
 
+  user: any;
+  token = this.retornaToken();
 
   constructor(private http: HttpClient) { }
 
@@ -27,6 +28,19 @@ export class ApiServiceService {
       email: email,
       password: password
     })
+  }
+
+  sendMessage(url: any, username: string, pontoMelhorar: string,
+    pontoManter: string, sugestoes: string, feedback: string): Observable<any> {
+    return this.http.post(url, {
+      username: username,
+      sends: [{
+        pontoMelhorar: pontoMelhorar,
+        pontoManter: pontoManter,
+        sugestoes: sugestoes,
+        feedbackFinal: feedback
+      }]
+    });
   }
 
   autenticar(username: string, password: string): Observable<HttpResponse<any>> {

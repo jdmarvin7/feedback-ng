@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { ApiServiceService } from './api-service.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ import { Observable } from 'rxjs';
 export class ServiceSendService {
   urlBase = 'http://localhost:3000/sends';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private service: ApiServiceService) { }
 
   getSends(): Observable<any> {
     return this.http.get(this.urlBase);

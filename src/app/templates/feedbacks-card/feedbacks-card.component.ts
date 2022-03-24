@@ -13,11 +13,11 @@ const KEY = 'token'
 })
 export class FeedbacksCardComponent implements OnInit {
 
-  users: any[] = [];
+  envios: any[] = [];
 
   user: any;
 
-  constructor(private service: ApiServiceService, private router: Router, private http: HttpClient) { }
+  constructor(private serviceSend: ServiceSendService, private service: ApiServiceService, private router: Router, private http: HttpClient) { }
 
   ngOnInit(): void {
     /*
@@ -27,14 +27,25 @@ export class FeedbacksCardComponent implements OnInit {
       }
       );*/
     this.userLogged();
+    this.sends();
   }
 
   userLogged() {
     this.service.estaLogado();
     const token = JSON.parse(this.service.retornaToken());
     this.user = token;
-    console.log(token);
-
   }
+
+  sends() {
+    this.serviceSend.getSends().subscribe((sends) => {
+      if(this.service.possuiToken()) {
+        this.envios = sends;
+      }
+
+
+    })
+  }
+
+
 
 }

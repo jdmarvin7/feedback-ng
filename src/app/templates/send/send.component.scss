@@ -34,6 +34,7 @@
         .to {
           outline: none;
           border: none;
+          border-bottom: 1px solid var(--red);
         }
       }
     }
@@ -79,3 +80,4 @@ input:not(.to) {
 .last {
   display: flex;
 }
+
