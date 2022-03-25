@@ -5,7 +5,11 @@
 
 #side-bar {
   background: var(--red);
-  height: 150vh;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 18%;
   overflow: hidden;
   .user-bg {
     display: flex;

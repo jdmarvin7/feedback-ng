@@ -1,5 +1,5 @@
 <ng-container *ngFor="let message of envios">
-  <div *ngIf="message.InboxUsername !== user.data.nome" class="feedback-card" [routerLink]="['view']">
+  <div *ngIf="message.InboxUsername !== user.data.nome && message.SendUsername === user.data.id" class="feedback-card" (click)="clicked()">
     <img src="https://www.lance.com.br/files/article_main/uploads/2021/02/28/603bdef934423.jpeg" width="60" alt="Imagem de perfil da pessoa">
     <div>
       <h2>{{ message.InboxUsername }}</h2>

@@ -44,6 +44,10 @@ export class FeedbacksCardComponent implements OnInit {
     })
   }
 
+  clicked() {
+    this.router.navigate(['dashboard/views'])
+  }
+
 
 
 }

@@ -21,20 +21,22 @@ const routes: Routes = [
         component: DashboardComponent,
       },
       {
+        path: 'dashboard',
+        pathMatch: 'full',
+        redirectTo: 'dashboard'
+      },
+      {
+        path: 'dashboard',
+        loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
+      },
+      {
         path: 'feedbacks',
         component: FeedbacksComponent,
-        children: [
-
-        ]
       },
       {
         path: 'send',
         component: SendComponent,
       },
-      {
-        path: 'view',
-        component: FeedbacksViewsComponent,
-      }
     ]
   },
 ];

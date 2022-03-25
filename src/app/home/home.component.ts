@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
   login() {
     this.service.fazerLogin(this.username, this.password).subscribe(
       (user: any) => {
-        this.router.navigate(['home'])
+        this.router.navigate(['home/dashboard'])
         this.service.salvarToken(JSON.stringify(user))
       })
     }

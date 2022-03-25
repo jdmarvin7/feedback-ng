@@ -1,38 +1,37 @@
-<div class="send-container">
-  <div class="user-card">
+<ng-container *ngFor="let inbox of envios">
+  <div class="send-container" *ngIf="inbox.InboxUsername !== user.data.nome">
+    <div class="user-card">
 
-    <div class="header">
-      <div class="details">
-        <img src="https://www.lance.com.br/files/article_main/uploads/2021/02/28/603bdef934423.jpeg" width="60" alt="">
-        <div>
-          <h2>Username</h2>
+      <div class="header">
+        <div class="details">
+          <img src="https://www.lance.com.br/files/article_main/uploads/2021/02/28/603bdef934423.jpeg" width="60" alt="">
+          <div>
+            <h2>{{ inbox.InboxUsername }}</h2>
+          </div>
+        </div>
+        <div class="details2">
+          <img src="/assets/img/edit.svg" alt="" width="60" alt="">
+          <div>
+            <img src="/assets/img/delete.svg" alt="" width="60">
+          </div>
         </div>
       </div>
-      <div class="details2">
-        <img src="/assets/img/edit.svg" alt="" width="60" alt="">
+
+      <form class="form-input">
         <div>
-          <img src="/assets/img/delete.svg" alt="" width="60">
+          <p>{{ inbox.pontoMelhorar }}</p>
         </div>
-      </div>
+        <div>
+          <p>{{ inbox.pontoManter }}</p>
+        </div>
+        <div>
+          <p>{{ inbox.sugestoes }}</p>
+        </div>
+        <div class="last">
+          <p>{{ inbox.feedbackFinal }}</p>
+        </div>
+      </form>
     </div>
-
-    <form class="form-input">
-      <div>
-        <label for="" class="sr-only"></label>
-        <input type="text" placeholder="Pontos a melhorar">
-      </div>
-      <div>
-        <label for="" class="sr-only"></label>
-        <input type="text" placeholder="Pontos a manter">
-      </div>
-      <div>
-        <label for="" class="sr-only"></label>
-        <input type="text" placeholder="Sugestões">
-      </div>
-      <div class="last">
-        <label for="" class="sr-only"></label>
-        <input type="text" placeholder="Feedback final">
-      </div>
-    </form>
   </div>
-</div>
+
+</ng-container>
