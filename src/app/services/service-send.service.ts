@@ -11,8 +11,8 @@ export class ServiceSendService {
 
   constructor(private http: HttpClient, private service: ApiServiceService) { }
 
-  getSends(): Observable<any> {
-    return this.http.get(this.urlBase);
+  getSends(url: any): Observable<any> {
+    return this.http.get(`http://localhost:3000/sends?token=${url}`);
   }
 
   sendMessage(username: string, pontoMelhorar: string,

@@ -28,6 +28,7 @@ export class FeedbacksCardComponent implements OnInit {
       );*/
     this.userLogged();
     this.sends();
+
   }
 
   userLogged() {
@@ -37,12 +38,9 @@ export class FeedbacksCardComponent implements OnInit {
   }
 
   sends() {
-    this.serviceSend.getSends().subscribe((sends) => {
-      if(this.service.possuiToken()) {
-        this.envios = sends;
-      }
-
-
+    this.serviceSend.getSends(this.user.token).subscribe((sends) => {
+      this.envios = sends;
+    console.log(this.envios);
     })
   }
 

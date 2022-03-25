@@ -1,11 +1,11 @@
-<ng-container >
-  <div class="feedback-card" [routerLink]="['view']">
+<ng-container *ngFor="let message of envios">
+  <div *ngIf="message.InboxUsername !== user.data.nome" class="feedback-card" [routerLink]="['view']">
     <img src="https://www.lance.com.br/files/article_main/uploads/2021/02/28/603bdef934423.jpeg" width="60" alt="Imagem de perfil da pessoa">
     <div>
-      <h2>{{ user.data.nome }}</h2>
+      <h2>{{ message.InboxUsername }}</h2>
       <div>
-        <p>Title: <span> {{ user.data.email }} </span></p>
-        <small>{{ user.data.id }}</small>
+        <p>Title: <span> {{ message.pontoMelhorar }} </span></p>
+        <small>{{ message.created_at }}</small>
       </div>
     </div>
   </div>
