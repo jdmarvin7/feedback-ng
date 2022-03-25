@@ -21,7 +21,14 @@ export class SideBarComponent implements OnInit {
   }
 
   logOut() {
-    this.service.logout();
+  }
+
+  clicked() {
+    if(confirm('Tem certeza que deseja sair?')){
+      console.log('ok');
+      this.service.logout();
+      this.router.navigate(['login']);
+    };
   }
 
   userLogged() {

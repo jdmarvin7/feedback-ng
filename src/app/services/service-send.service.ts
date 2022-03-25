@@ -31,4 +31,8 @@ export class ServiceSendService {
       id: id,
     });
   }
+
+  deleteMessage(id: string): Observable<any> {
+    return this.http.delete(`${this.urlBase}/:id`);
+  }
 }

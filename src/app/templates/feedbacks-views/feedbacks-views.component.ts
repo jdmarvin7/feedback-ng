@@ -33,4 +33,13 @@ export class FeedbacksViewsComponent implements OnInit {
     })
   }
 
+  deletar() {
+    if(confirm('Tem certeza que deseja deletar esta mensagem?')) {
+      this.serviceSend.deleteMessage(this.envios[0]._id).subscribe((sends) => {
+        console.log('deletado!');
+
+      })
+    }
+  }
+
 }
