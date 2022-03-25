@@ -1,8 +1,13 @@
 # FeedbackNg
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
-#
 Esse porojeto foi criado do zero por mim [JD MARVIN MAEL DESTIN](http://github.com/jdmarvin7)
+# GUIA
+  # - Criar duas contas
+  # - Fazer login nas duas contas em navegadores diferentes
+  # - Mandar feedbacks através do navbar "SEND"
+  # - Ler seus feedbacks através do navbar "FEED"
+  # - Tenha certeza de que o usuário que você está mandando a mensagem exista no banco
+  # - Emails e username não podem ser duplicadas
+  # - Estar faltando a parte da validação do formulario no angular é bom tomar esses cuidados
 #
 # !IMPORTANTE
 precisa cadastrar um usuário para poder fazer login no sistema
@@ -20,9 +25,9 @@ link do projeto backend [link](https://github.com/jdmarvin7/api-feedbacks)
 #
 #
 # Partes faltantes para finalizar o projeto front-end
-- Tela de envio dos feedbacks,
-- Tela de Inboxes
-- A sera direcionado para home para ver seus feedbacks que vão aparecer no feed
+[icon](https://cdn-icons-png.flaticon.com/512/32/32282.png) Tela de envio dos feedbacks,
+[icon](https://cdn-icons-png.flaticon.com/512/32/32282.png) Tela de Inboxes
+[icon](https://cdn-icons-png.flaticon.com/512/32/32282.png) A sera direcionado para home para ver seus feedbacks que vão aparecer no feed
 - validações no front-end com angular
 
 ## Development server
