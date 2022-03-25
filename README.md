@@ -7,7 +7,7 @@ Esse porojeto foi criado do zero por mim [JD MARVIN MAEL DESTIN](http://github.c
   ### - Ler seus feedbacks através do navbar "FEED"
   ### - Tenha certeza de que o usuário que você está mandando a mensagem exista no banco
   ### - Emails e username não podem ser duplicadas
-  ### - Estar faltando a parte da validação do formulario no angular é bom tomar esses cuidados
+  ### - Por estar faltando a parte da validação do formulario no angular é bom tomar esses cuidados
 #
 # !IMPORTANTE
 precisa cadastrar um usuário para poder fazer login no sistema
